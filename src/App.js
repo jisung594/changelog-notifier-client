@@ -19,11 +19,11 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.news.split("\n"))
+    // console.log(this.state.news.split("\n"))
     return (
       <div className="App">
-        <Navbar/>
-        <MainContainer/>
+        <Navbar news={this.state.news}/>
+        <MainContainer news={this.state.news}/>
       </div>
     );
   }
