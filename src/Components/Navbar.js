@@ -6,7 +6,7 @@ class Navbar extends Component {
   render() {
       return (
         <div>
-          <h2>navbar</h2>
+          <h2>Changelog</h2>
         </div>
       )
   }
