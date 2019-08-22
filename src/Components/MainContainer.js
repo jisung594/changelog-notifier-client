@@ -10,11 +10,11 @@ class MainContainer extends Component {
   }
 
   render() {
-      return (
-        <div className="main-container">
-          {this.parseContent(this.props.news.split('\n\n'))}
-        </div>
-      )
+    return (
+      <div className="main-container">
+        {this.parseContent(this.props.news.split('\n\n'))}
+      </div>
+    )
   }
 }
 
