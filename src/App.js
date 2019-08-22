@@ -23,7 +23,7 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar news={this.state.news}/>
-        <MainContainer news={this.state.news} />
+        <MainContainer news={this.state.news}/>
       </div>
     );
   }

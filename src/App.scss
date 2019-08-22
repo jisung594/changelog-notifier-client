@@ -1,20 +1,70 @@
 .App {
   display: grid;
-  grid-template-rows: 10vh 90vh;
+  grid-template-rows: 5vw 95vw;
   width: 100vw;
   height: 100vh;
 
-  .main-container {
-    h2 {
-      font-size: 3em;
+  .navbar {
+    display: grid;
+    grid-template-columns: 90vw 10vw;
+    position: relative;
+
+    #notification {
+      display: inline-block;
+      position: absolute;
+      margin: 0.5vw 5vw 5vw 5vw;
+      z-index: 5;
+      float: right;
+      width: 1.5vw;
+      height: 1.5vw;
+      background-color: #e50000;
+      border-radius: 50%;
     }
 
-    h3 {
-      font-size: 2em;
+    img {
+      position: absolute;
+      border-radius: 50%;
+      z-index: -1;
+      width: 4vw;
+      height: 4vw;
+      object-fit: cover;
+      margin: 0.5vw 2.5vw;
+      float: right;
     }
 
-    h4 {
-      font-size: 1.5em;
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      width: 30vw;
+      height: 30vw;
+      overflow: auto;
     }
+
+    // .modal-list {
+    //   .mod-block {
+    //
+    //   }
+    // }
+
   }
+
+  .main-container {
+
+    .list-block {
+      h2 {
+        font-size: 3em;
+      }
+
+      h3 {
+        font-size: 2em;
+      }
+
+      h4 {
+        font-size: 1.5em;
+      }
+    }
+
+  }
+
 }
