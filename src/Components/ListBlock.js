@@ -7,7 +7,10 @@ const ListBlock = (props) => {
     <div className="list-block">
       {
         update.split("\n").map(line => {
-          if (line.includes("### ")) {
+          if (line.includes("#### ", "")) {
+            let newLine = line.replace("#### ", "")
+            return <span>{newLine}</span>
+          } else if (line.includes("### ")) {
             let newLine = line.replace("### ", "")
             return <h4>{newLine}</h4>
           } else if (line.includes("## ")) {

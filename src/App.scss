@@ -7,10 +7,20 @@
   .navbar {
     display: grid;
     grid-template-columns: 90vw 10vw;
-    position: relative;
+    position: fixed;
     background-color: gray;
 
+    .navbar-column-1, .navbar-column-2 {
+      display: flex;
+      height: 5vw;
+
+      h2 {
+        margin: auto auto auto 5vw;
+      }
+    }
+
     #notification {
+      margin-left: 2vw;
       display: inline-block;
       position: fixed;
       margin: 0.5vw 5vw 5vw 5vw;
@@ -35,17 +45,38 @@
   }
 
   .main-container {
+    margin: 2vw;
+
+    h2 {
+      margin-top: 7vw;
+    }
+
     .list-block {
+      margin: 3vw;
+
       h2 {
         font-size: 3em;
       }
 
       h3 {
+        display: inline-block;
         font-size: 2em;
+        line-height: 0;
       }
 
       h4 {
         font-size: 1.5em;
+        line-height: 0;
+      }
+
+      p {
+        font-size: 1.25em;
+      }
+
+      span {
+        margin-left: 2vw;
+        font-size: 1.5vw;
+        font-style: italic;
       }
     }
   }
@@ -61,21 +92,36 @@
     right: 0;
 
     .close {
-      font-size: 5vw;
+      font-size: 4vw;
       font-weight: bold;
       text-decoration: none;
-      line-height: 0;
+      line-height: 1;
       float: right;
-      margin: 3vw;
+      margin: 0 2vw 0 2vw;
     }
 
     .modal-list {
-      margin: 2vw;
+      margin: 5vw 2vw 5vw 2vw;
 
       .mod-block {
         background-color: white;
-        padding: 0.2vh 0.5vw 0.2vh 0.5vw;
-        // margin: 2vw;
+        padding: 1vw;
+
+        h3 {
+          display: inline-block;
+          font-size: 1.2em;
+          line-height: 0;
+        }
+
+        h4 {
+          font-size: 0.8em;
+          line-height: 0;
+        }
+
+        span {
+          margin-left: 1.5vw;
+          font-size: 0.8em;
+        }
       }
     }
   }

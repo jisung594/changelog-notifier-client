@@ -4,22 +4,37 @@ import '../App.scss';
 
 
 class ModContainer extends Component {
+  state = {
+    update: ""
+  }
+
+  selectedUpdate = (data) => {
+    this.setState({
+      update: data
+    })
+  }
+
   parseContent = (data) => {
     return data.map(update => {
-      return <ModBlock update={update}/>
+      return <ModBlock update={update} selectedUpdate={this.selectedUpdate}/>
     })
   }
 
   render() {
-    let modal = document.querySelector('.modal')
-
     return (
-      <div className="modal">
-        <span className="close" onClick={this.props.clickedHandler}>&times;</span>
-        <div className="modal-list">
-          <h2>{this.props.news.split('\n')[0].replace("# ","")}</h2>
-          {this.parseContent(this.props.news.split('\n\n'))}
-        </div>
+      <div>
+        {
+          !this.state.update
+          ? <div className="modal">
+              <span className="close" onClick={this.props.clickedHandler}>&times;</span>
+              <div className="modal-list">
+                {this.parseContent(this.props.news.split('\n\n'))}
+              </div>
+            </div>
+          : <div className="modal">
+              <ModBlock update={this.state.update}/>
+            </div>
+        }
       </div>
     )
   }
