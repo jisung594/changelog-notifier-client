@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Navbar from './Components/Navbar.js'
 import MainContainer from './Components/MainContainer.js'
-import './App.css';
+import './App.scss';
 
 
 class App extends Component {
@@ -23,7 +23,7 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar news={this.state.news}/>
-        <MainContainer news={this.state.news}/>
+        <MainContainer news={this.state.news} />
       </div>
     );
   }
