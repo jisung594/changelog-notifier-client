@@ -13,10 +13,7 @@ const ModBlock = (props) => {
           } else if (line.includes("## ")) {
             let newLine = line.replace("## ", "")
             return <h3>{newLine}</h3>
-          } else if (line.includes("# ")) {
-            let newLine = line.replace("# ", "")
-            return <h2>{newLine}</h2>
-          } else {
+          } else if (!line.includes("# ")) {
             return <p>{line}</p>
           }
         })

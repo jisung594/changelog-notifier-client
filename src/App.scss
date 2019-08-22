@@ -8,10 +8,11 @@
     display: grid;
     grid-template-columns: 90vw 10vw;
     position: relative;
+    background-color: gray;
 
     #notification {
       display: inline-block;
-      position: absolute;
+      position: fixed;
       margin: 0.5vw 5vw 5vw 5vw;
       z-index: 1;
       float: right;
@@ -31,28 +32,9 @@
       margin: 0.5vw 2.5vw;
       float: right;
     }
-
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1;
-      width: 50vw;
-      height: 30vw;
-      overflow: auto;
-      background-color: gray;
-
-    }
-
-    // .modal-list {
-    //   .mod-block {
-    //
-    //   }
-    // }
-
   }
 
   .main-container {
-
     .list-block {
       h2 {
         font-size: 3em;
@@ -66,7 +48,36 @@
         font-size: 1.5em;
       }
     }
+  }
 
+  .modal {
+    position: fixed;
+    display: block;
+    z-index: 1;
+    width: 30vw;
+    height: 50vw;
+    overflow: auto;
+    background-color: gray;
+    right: 0;
+
+    .close {
+      font-size: 5vw;
+      font-weight: bold;
+      text-decoration: none;
+      line-height: 0;
+      float: right;
+      margin: 3vw;
+    }
+
+    .modal-list {
+      margin: 2vw;
+
+      .mod-block {
+        background-color: white;
+        padding: 0.2vh 0.5vw 0.2vh 0.5vw;
+        // margin: 2vw;
+      }
+    }
   }
 
 }

@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
 import Navbar from './Components/Navbar.js'
 import MainContainer from './Components/MainContainer.js'
+import ModContainer from './Components/ModContainer.js'
 import './App.scss';
 
 
 class App extends Component {
   state = {
-    news: ""
+    news: "",
+    clicked: false
   }
 
   componentDidMount() {
@@ -18,12 +20,22 @@ class App extends Component {
       }))
   }
 
+  clickedHandler = (event) => {
+    this.setState({
+      clicked: !this.state.clicked
+    })
+  }
+
   render() {
-    // console.log(this.state.news.split("\n"))
     return (
       <div className="App">
-        <Navbar news={this.state.news}/>
+        <Navbar news={this.state.news} clickedHandler={this.clickedHandler}/>
         <MainContainer news={this.state.news}/>
+        {
+          this.state.clicked
+          ? <ModContainer news={this.state.news} clickedHandler={this.clickedHandler}/>
+          : null
+        }
       </div>
     );
   }
